@@ -1,8 +1,8 @@
 import random
 points = 0
 
-dict = {"name":input("Enter your name: "),"title":input("Enter your title: ")}
-print("\nHello",dict['title'],dict['name'])
+dict = {"name":input("Enter your name: ")}
+print("\nHello",dict['name'])
 #constants
 words = ("overused","calm","guam","end of semester","prom","homework")
 hangman = (
