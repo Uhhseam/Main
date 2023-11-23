@@ -4,7 +4,7 @@ points = 0
 dict = {"name":input("Enter your name: ")}
 print("\nHello",dict['name'])
 #constants
-words = ("overused","calm","guam","end of semester","prom","homework")
+words = ("overused","calm","guam","semester","prom","homework")
 hangman = (
     """     
      -------
@@ -107,7 +107,7 @@ while goOn.lower() != 'n':
     soFar = '_' * len(word)
     used = []
 
-    print("Welcome to Hangman. Best of luck, Human")
+    print("Welcome to Hangman. Best of luck!")
     wrong = 0
     numTries = 0
     while wrong < maxWrong and soFar != word:
