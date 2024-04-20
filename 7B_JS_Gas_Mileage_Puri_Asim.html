@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta content = "text/html; charset=utf=8" http-equiv="Content-Type"/>
+        <title>Calculate Miles</title>
+
+
+
+
+        <script type = "text/javascript">
+            <!--
+                
+    var Startmileage; //startmileage
+    var Endmileage; //endmileage
+    var Gallonsused; //gallons used
+    var Milesdriven; // miles driven
+    var Gasmileage; //gas mileage
+    var Message; //message
+    var Count = 1; //how many data set entered
+    var Averagegasmileage = 0; //For finding the average of all trips
+    
+
+    Startmileage = window.prompt("Enter Start Mileage... if finished enter 0");
+    Startmileage=parseInt(Startmileage);
+    document.write("<table>");
+        document.write("<tr><td>Set Entry Number </td>");
+            document.write("<td></td>");
+            document.write("<td></td>");
+            document.write("<td>Start Miles</td>");
+            document.write("<td></td>");
+            document.write("<td></td>");
+            document.write("<td>End Mileage</td>");
+            document.write("<td></td>");
+            document.write("<td></td>");
+            document.write("<td>Gallons Used</td>");
+            document.write("<td></td>");
+            document.write("<td></td>");
+            document.write("<td>Miles Driven</td>");
+            document.write("<td></td>");
+            document.write("<td></td>");
+            document.write("<td>Miles Per Gallon</td>");
+            document.write("<td></td>");
+            document.write("<td></td>");
+            document.write("<td>Fuel Effeciency </td></tr>");
+        while(Startmileage > 0)
+        {
+            Endmileage = window.prompt("Enter End Mileage");
+            Gallonsused = window.prompt("Enter Gallons Used");
+            Endmileage = parseInt(Endmileage);
+            Gallonsused = parseInt(Gallonsused);
+            Milesdriven = Endmileage - Startmileage;
+            Gasmileage = Milesdriven/Gallonsused;
+            Averagegasmileage += Gasmileage;
+                if(Gasmileage > 25)
+                {
+                    Message = "Excellent";
+                }
+                else if(Gasmileage > 18)
+                {
+                    Message = "Average";
+                }
+                else
+                    Message = "Poor";
+
+                document.write("<tr><td>" + Count + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + Startmileage + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + Endmileage + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + Gallonsused + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + Milesdriven + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + Gasmileage + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + "</td>");
+                document.write("<td>" + Message + "</td>");
+                document.writeln("</tr>");
+                    window.alert("finished data set" + Count);
+                        Count++;
+
+        Startmileage=window.prompt("Enter Start Mileage... if finished enter 0");
+
+
+        }
+            document.write("</table>");
+                Count--;
+            document.write("<table>");
+            Averagegasmileage = Averagegasmileage/Count;
+            document.write("<tr><td> The Total average of all trips is " + Averagegasmileage + "</td></tr>");
+
+            if(Averagegasmileage > 25)
+                {
+                    Message = "Excellent";
+                }
+                else if(Averagegasmileage > 18)
+                {
+                    Message = "Average";
+                }
+                else
+                    Message = "Poor";
+        document.writeln("<tr><td>Overall Your Vehicle's Fuel Efficiency is " + Message + "</td></tr>");
+
+        document.write("</table>");
+
+        // -->
+        </script>
+    </head>
+    <body>
+    </body>
+</HTML>
