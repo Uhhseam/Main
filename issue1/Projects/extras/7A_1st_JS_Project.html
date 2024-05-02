@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My First JavaScript Program</title>
+        <script type="text/JavaScript">
+            function show_prompt()
+            {
+                var name=prompt("Please enter your name", "name");
+                var time = prompt("Please enter length of loan in months: ", "");
+                var amountFinanced = prompt("Please enter how much to finance: ", "");
+
+                document.write("<H1>Hello "+ name + "! How are you today?</h1>");
+                var ok = confirm("Is this Correct?");
+                
+                    if(ok == true)
+                    { document.writeln("<p> You have entered " + time + " for term of loan</p>");
+                document.writeln("<p> Amount financed is " + amountFinanced + "</p>");
+                }else
+                {window.alert("Please fill out form completely");}
+                
+            }
+
+        </script>
+    </head><body>
+        <p>A form will be loaded here and processed later in this excerside</p>
+        <input type="button" onclick="show_prompt()" value="show prompt box" />
+    </body>
+</html>
